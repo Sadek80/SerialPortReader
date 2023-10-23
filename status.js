@@ -28,11 +28,6 @@ document.querySelector('#openSerialPort').addEventListener('click', async () => 
    const writableStreamClosed = textEncoder.readable.pipeTo(port.writable);
    const writer = textEncoder.writable.getWriter();
 
-   document.querySelector('#writeToSerialPort').addEventListener('click', async () => {
-    console.log("write")
-    await writer.write("hello");
- })
-
  // Closing Serial Port requires to cancel the reader then release the lock of the port reader first then close the port
 
  //document.querySelector('#closeSerialPort').addEventListener('click', async () => {
